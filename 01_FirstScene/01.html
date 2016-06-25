@@ -41,7 +41,7 @@
         0.1, 1000);
 
       var renderer = new THREE.WebGLRenderer();
-      renderer.setClearColor(0xEEEEEE, 1); // it's setClearColor instead of setClearColorHex
+      renderer.setClearColor(0xAA22AA, 1); // it's setClearColor instead of setClearColorHex
       renderer.setSize(window.innerWidth, window.innerHeight);
       renderer.shadowMap.enabled = true;
       // This makes the shadows better
@@ -54,7 +54,7 @@
             THIS IS THE PLANE SECTION
       ################################*/
       var planeGeometry = new THREE.PlaneGeometry(60,20);
-      var planeMaterial = new THREE.MeshLambertMaterial( {color: 0xCCCCCC} );
+      var planeMaterial = new THREE.MeshLambertMaterial( {color: 0x22CCCC} );
       var plane = new THREE.Mesh(planeGeometry,planeMaterial);
       plane.receiveShadow = true;
       plane.rotation.x = -0.5 * Math.PI;
@@ -67,7 +67,7 @@
             THIS IS THE CUBE SECTION
       ################################*/
       var cubeGeometry = new THREE.CubeGeometry(4,4,4);
-      var cubeMaterial = new THREE.MeshLambertMaterial( { color: 0xFF0099 } );
+      var cubeMaterial = new THREE.MeshLambertMaterial( { color: 0xFFFFFF } );
       var cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
       cube.castShadow = true;
       cube.position.x = -4;
@@ -79,7 +79,7 @@
             THIS IS THE SPHERE SECTION
       ################################*/
       var sphereGeometry = new THREE.SphereGeometry(4,20,20);
-      var sphereMaterial = new THREE.MeshLambertMaterial( { color: 0x7777ff } );
+      var sphereMaterial = new THREE.MeshLambertMaterial( { color: 0xffff33 } );
       var sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
       sphere.castShadow = true;
       sphere.position.x = 20;
