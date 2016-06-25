@@ -90,6 +90,12 @@
       camera.position.z = 30;
       camera.lookAt(scene.position);
 
+
+
+      /* ################################
+            THIS IS THE RENDERING TO DOM
+      ################################*/
+
       document.getElementById("WebGL-output").appendChild(renderer.domElement);
       renderer.render(scene, camera);
     }
