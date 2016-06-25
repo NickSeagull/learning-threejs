@@ -45,7 +45,7 @@
       renderer.setSize(window.innerWidth, window.innerHeight);
       renderer.shadowMap.enabled = true;
       // This makes the shadows better
-      renderer.shadowMapType = THREE.PCFSoftShadowMap;
+      renderer.shadowMap.type = THREE.PCFSoftShadowMap;
       var axes = new THREE.AxisHelper(20);
       scene.add(axes);
 
@@ -101,8 +101,8 @@
       ################################*/
       var spotLight = new THREE.SpotLight( 0xFFFFFF );
       // This makes the shadows better
-      spotLight.shadowMapWidth = 1024; // default is 512
-      spotLight.shadowMapHeight = 1024; // default is 512
+      spotLight.shadow.mapSize.width = 1024; // default is 512
+      spotLight.shadow.mapSize.height = 1024; // default is 512
       //----------------------------
       spotLight.position.set(-40, 60, -10);
       spotLight.castShadow = true;
